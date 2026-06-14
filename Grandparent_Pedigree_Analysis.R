@@ -143,8 +143,8 @@ duos.status.filename <- "Duo_Status_Objects.Rdata"
 results.file.path <- "C:/Users/curly/Desktop/Apple Genotyping/Results/Grandparent Pedigree Analysis"
 
 # Names for the result files
-result.filename.part1 <- "Results_1.txt"
-result.filename.part2 <- "Results_1.txt"
+result.filename.part1 <- "Results.txt"
+result.filename.part2 <- "Results.txt"
 
 # Directory containing supplementary script "rutilsHMuranty_pedigree.R"
 function.file.path  <- "C:/Users/curly/Desktop/Apple Genotyping/Methods/Grandparent Pedigree Analysis/Inputs/Muranty_Scripts"
@@ -153,7 +153,7 @@ function.file.path  <- "C:/Users/curly/Desktop/Apple Genotyping/Methods/Grandpar
 # Define thresholds -------------------------------------------------------
 
 # Acceptable threshold for exporting a result
-error.threshold <- 0.1
+error.threshold <- 0.025
 
 # Define a part of the individuals to test as GP1
 start.i <- 1
@@ -520,6 +520,6 @@ for(ind.i in seq(from = start.i, to = end.i)) {
   cat("all pairs involving", ind.i.id,
       "examined in", finish.time.in - start.time.in, fill = T)
 }
-finish.time.out <- Sys.time()
+finish.time.out <- start.time.in
 
 cat("all GP pairs examined in", finish.time.out - start.time.out, fill = T)
